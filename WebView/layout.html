@@ -1,0 +1,95 @@
+{{ define "layout" }}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="{{ .Static }}/img/favicon.png" type="image/png">
+    <title>{{ block "title" . }}{{ .Title }}{{ end }}</title>
+    <link rel="stylesheet" href="{{ . }}/css/bootstrap.css">
+    <link rel="stylesheet" href="{{ . }}/vendors/linericon/style.css">
+    <link rel="stylesheet" href="{{ . }}/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{{ . }}/vendors/owl-carousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="{{ .}}/css/magnific-popup.css">
+    <link rel="stylesheet" href="{{ . }}/vendors/nice-select/css/nice-select.css">
+    <link rel="stylesheet" href="{{ . }}/css/style.css">
+    {{ block "head" . }}{{ end }}
+</head>
+<body>
+    {{ template "header" . }}
+    {{ block "content" . }}{{ end }}
+    {{ template "footer" . }}
+    <script src="{{ .Static }}/js/jquery-3.2.1.min.js"></script>
+    <script src="{{ .Static }}/js/popper.js"></script>
+    <script src="{{ .Static }}/js/bootstrap.min.js"></script>
+    <script src="{{ .Static }}/js/stellar.js"></script>
+    <script src="{{ .Static }}/js/jquery.magnific-popup.min.js"></script>
+    <script src="{{ .Static }}/vendors/nice-select/js/jquery.nice-select.min.js"></script>
+    <script src="{{ .Static }}/vendors/isotope/imagesloaded.pkgd.min.js"></script>
+    <script src="{{ .Static }}/vendors/isotope/isotope-min.js"></script>
+    <script src="{{ .Static }}/vendors/owl-carousel/owl.carousel.min.js"></script>
+    <script src="{{ .Static }}/js/jquery.ajaxchimp.min.js"></script>
+    <script src="{{ .Static }}/js/mail-script.js"></script>
+    <script src="{{ .Static }}/js/gmaps.min.js"></script>
+    <script src="{{ .Static }}/js/theme.js"></script>
+    {{ block "script" . }}{{ end }}
+</body>
+</html>
+{{ end }}
+
+{{ define "header" }}
+<header class="header_area">
+    <div class="main_menu">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container">
+                <a class="navbar-brand logo_h" href="/"><img src="{{ .Static }}/img/logo.png" alt=""></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+                    <ul class="nav navbar-nav menu_nav justify-content-end">
+                        <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/about">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/services">Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/portfolio">Portfolio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+</header>
+{{ end }}
+
+{{ define "footer" }}
+<footer class="footer_area">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-12">
+                <div class="footer_top flex-column">
+                    <div class="footer_logo">
+                        <a href="#">
+                            <img src="{{ .Static }}/img/logo.png" alt="">
+                        </a>
+                        <h4>Follow Me</h4>
+                    </div>
+                    <div class="footer_social">
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-dribbble"></i></a>
+                        <a href="#"><i class="fa fa-behance"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row footer_bottom justify-content-center">
+            <p class="col-lg-8 col-sm-12 footer-text">
+                Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+            </p>
+        </div>
+    </div>
+</footer>
+{{ end }}
